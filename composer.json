@@ -17,7 +17,7 @@
         "illuminate/support": "~5.0",
         "illuminate/database": "~5.0",
         "nesbot/carbon": "~1.0",
-        "pusher/pusher-php-server": "^4.0",
+        "pusher/pusher-php-server": "^3.0",
         "pusher/pusher-http-laravel": "^4.0"
     },
     "require-dev": {
