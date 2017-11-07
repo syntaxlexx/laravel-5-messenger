@@ -1,4 +1,4 @@
-# Laravel 5 Messenger
+# Laravel 5 Messenger (+ Pusher)
 This package will allow you to add a full user messaging system into your Laravel application. It is a fork of the [cmgmyr/laravel-messenger](https://github.com/cmgmyr/laravel-messenger) with added features such as maximum number of participants in a conversation, and a unique social media sharing code for inviting users to a conversation(otherwise known as Thread in this package).
 
 ## Features
