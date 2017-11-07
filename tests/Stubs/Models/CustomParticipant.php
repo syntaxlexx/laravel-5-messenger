@@ -1,8 +1,8 @@
 <?php
 
-namespace Lexx\Messenger\Test\Stubs\Models;
+namespace Lexx\ChatMessenger\Test\Stubs\Models;
 
-use Lexx\Messenger\Models\Participant;
+use Lexx\ChatMessenger\Models\Participant;
 
 class CustomParticipant extends Participant
 {

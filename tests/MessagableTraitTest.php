@@ -1,10 +1,10 @@
 <?php
 
-namespace Lexx\Messenger\Test;
+namespace Lexx\ChatMessenger\Test;
 
 use Carbon\Carbon;
-use Lexx\Messenger\Models\Thread;
-use Lexx\Messenger\Traits\Messagable;
+use Lexx\ChatMessenger\Models\Thread;
+use Lexx\ChatMessenger\Traits\Messagable;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 class MessagableTraitTest extends TestCase

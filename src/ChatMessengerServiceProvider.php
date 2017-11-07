@@ -1,14 +1,14 @@
 <?php
 
-namespace Lexx\Messenger;
+namespace Lexx\ChatMessenger;
 
-use Lexx\Messenger\Models\Message;
-use Lexx\Messenger\Models\Models;
-use Lexx\Messenger\Models\Participant;
-use Lexx\Messenger\Models\Thread;
+use Lexx\ChatMessenger\Models\Message;
+use Lexx\ChatMessenger\Models\Models;
+use Lexx\ChatMessenger\Models\Participant;
+use Lexx\ChatMessenger\Models\Thread;
 use Illuminate\Support\ServiceProvider;
 
-class MessengerServiceProvider extends ServiceProvider
+class ChatMessengerServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -36,20 +36,20 @@ class MessengerServiceProvider extends ServiceProvider
     }
 
     /**
-     * Setup the configuration for Messenger.
+     * Setup the configuration for ChatMessenger.
      *
      * @return void
      */
     protected function configure()
     {
         $this->mergeConfigFrom(
-            base_path('vendor/lexxyungcarter/messenger/config/config.php'),
-            'messenger'
+            base_path('vendor/lexxyungcarter/chatmessenger/config/config.php'),
+            'chatmessenger'
         );
     }
 
     /**
-     * Setup the resource publishing groups for Messenger.
+     * Setup the resource publishing groups for ChatMessenger.
      *
      * @return void
      */
@@ -57,11 +57,11 @@ class MessengerServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                base_path('vendor/lexxyungcarter/messenger/config/config.php') => config_path('messenger.php'),
+                base_path('vendor/lexxyungcarter/chatmessenger/config/config.php') => config_path('chatmessenger.php'),
             ], 'config');
 
             $this->publishes([
-                base_path('vendor/lexxyungcarter/messenger/migrations') => base_path('database/migrations'),
+                base_path('vendor/lexxyungcarter/chatmessenger/migrations') => base_path('database/migrations'),
             ], 'migrations');
         }
     }
@@ -70,14 +70,14 @@ class MessengerServiceProvider extends ServiceProvider
     {
         $config = $this->app->make('config');
 
-        Models::setMessageModel($config->get('messenger.message_model', Message::class));
-        Models::setThreadModel($config->get('messenger.thread_model', Thread::class));
-        Models::setParticipantModel($config->get('messenger.participant_model', Participant::class));
+        Models::setMessageModel($config->get('chatmessenger.message_model', Message::class));
+        Models::setThreadModel($config->get('chatmessenger.thread_model', Thread::class));
+        Models::setParticipantModel($config->get('chatmessenger.participant_model', Participant::class));
 
         Models::setTables([
-            'messages' => $config->get('messenger.messages_table', Models::message()->getTable()),
-            'participants' => $config->get('messenger.participants_table', Models::participant()->getTable()),
-            'threads' => $config->get('messenger.threads_table', Models::thread()->getTable()),
+            'messages' => $config->get('chatmessenger.messages_table', Models::message()->getTable()),
+            'participants' => $config->get('chatmessenger.participants_table', Models::participant()->getTable()),
+            'threads' => $config->get('chatmessenger.threads_table', Models::thread()->getTable()),
         ]);
     }
 
@@ -86,7 +86,7 @@ class MessengerServiceProvider extends ServiceProvider
         $config = $this->app->make('config');
 
         $model = $config->get('auth.providers.users.model', function () use ($config) {
-            return $config->get('auth.model', $config->get('messenger.user_model'));
+            return $config->get('auth.model', $config->get('chatmessenger.user_model'));
         });
 
         Models::setUserModel($model);

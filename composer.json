@@ -1,7 +1,7 @@
 {
-    "name": "lexxyungcarter/messenger",
+    "name": "lexxyungcarter/chatmessenger",
     "description": "Simple one-on-one/group messaging tool for Laravel 5 with Pusher",
-    "keywords": ["laravel", "messenger", "messaging", "user messaging", "chat", "pusher"],
+    "keywords": ["laravel", "chat", "messenger", "messaging", "user messaging", "chat", "pusher"],
     "license": "MIT",
     "authors": [{
         "name": "Lexx YungCarter",
@@ -26,18 +26,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Lexx\\Messenger\\": "src/"
+            "Lexx\\ChatMessenger\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Lexx\\Messenger\\Test\\": "tests/"
+            "Lexx\\ChatMessenger\\Test\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Lexx\\Messenger\\MessengerServiceProvider"
+                "Lexx\\ChatMessenger\\ChatMessengerServiceProvider"
             ]
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace Lexx\Messenger\Test;
+namespace Lexx\ChatMessenger\Test;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 

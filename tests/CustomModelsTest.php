@@ -1,14 +1,14 @@
 <?php
 
-namespace Lexx\Messenger\Test;
+namespace Lexx\ChatMessenger\Test;
 
-use Lexx\Messenger\Models\Message;
-use Lexx\Messenger\Models\Models;
-use Lexx\Messenger\Models\Participant;
-use Lexx\Messenger\Models\Thread;
-use Lexx\Messenger\Test\Stubs\Models\CustomMessage;
-use Lexx\Messenger\Test\Stubs\Models\CustomParticipant;
-use Lexx\Messenger\Test\Stubs\Models\CustomThread;
+use Lexx\ChatMessenger\Models\Message;
+use Lexx\ChatMessenger\Models\Models;
+use Lexx\ChatMessenger\Models\Participant;
+use Lexx\ChatMessenger\Models\Thread;
+use Lexx\ChatMessenger\Test\Stubs\Models\CustomMessage;
+use Lexx\ChatMessenger\Test\Stubs\Models\CustomParticipant;
+use Lexx\ChatMessenger\Test\Stubs\Models\CustomThread;
 
 class CustomModelsTest extends TestCase
 {

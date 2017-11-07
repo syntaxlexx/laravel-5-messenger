@@ -1,6 +1,6 @@
 <?php
 
-namespace Lexx\Messenger\Models;
+namespace Lexx\ChatMessenger\Models;
 
 class Models
 {
@@ -109,7 +109,7 @@ class Models
      * Get an instance of the messages model.
      *
      * @param  array $attributes
-     * @return \Lexx\Messenger\Models\Message
+     * @return \Lexx\ChatMessenger\Models\Message
      */
     public static function message(array $attributes = [])
     {
@@ -120,7 +120,7 @@ class Models
      * Get an instance of the participants model.
      *
      * @param  array $attributes
-     * @return \Lexx\Messenger\Models\Participant
+     * @return \Lexx\ChatMessenger\Models\Participant
      */
     public static function participant(array $attributes = [])
     {
@@ -131,7 +131,7 @@ class Models
      * Get an instance of the threads model.
      *
      * @param  array $attributes
-     * @return \Lexx\Messenger\Models\Thread
+     * @return \Lexx\ChatMessenger\Models\Thread
      */
     public static function thread(array $attributes = [])
     {

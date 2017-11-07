@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Carbon\Carbon;
-use Lexx\Messenger\Models\Message;
-use Lexx\Messenger\Models\Participant;
-use Lexx\Messenger\Models\Thread;
+use Lexx\ChatMessenger\Models\Message;
+use Lexx\ChatMessenger\Models\Participant;
+use Lexx\ChatMessenger\Models\Thread;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;

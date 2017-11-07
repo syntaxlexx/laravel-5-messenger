@@ -1,6 +1,6 @@
 <?php
 
-namespace Lexx\Messenger\Models;
+namespace Lexx\ChatMessenger\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
@@ -65,7 +65,7 @@ class Thread extends Eloquent
     /**
      * Returns the latest message from a thread.
      *
-     * @return \Lexx\Messenger\Models\Message
+     * @return \Lexx\ChatMessenger\Models\Message
      */
     public function getLatestMessageAttribute()
     {

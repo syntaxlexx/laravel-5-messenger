@@ -1,11 +1,11 @@
 <?php
 
-namespace Lexx\Messenger\Test;
+namespace Lexx\ChatMessenger\Test;
 
 date_default_timezone_set('America/New_York');
 
 use AdamWathan\Faktory\Faktory;
-use Lexx\Messenger\Models\Models;
+use Lexx\ChatMessenger\Models\Models;
 use Illuminate\Database\Capsule\Manager as DB;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -44,9 +44,9 @@ class TestCase extends Orchestra
      */
     protected function getEnvironmentSetUp($app)
     {
-        $app['config']->set('messenger.message_model', 'Lexx\Messenger\Models\Message');
-        $app['config']->set('messenger.participant_model', 'Lexx\Messenger\Models\Participant');
-        $app['config']->set('messenger.thread_model', 'Lexx\Messenger\Models\Thread');
+        $app['config']->set('chatmessenger.message_model', 'Lexx\ChatMessenger\Models\Message');
+        $app['config']->set('chatmessenger.participant_model', 'Lexx\ChatMessenger\Models\Participant');
+        $app['config']->set('chatmessenger.thread_model', 'Lexx\ChatMessenger\Models\Thread');
     }
 
     /**

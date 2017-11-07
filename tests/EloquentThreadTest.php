@@ -1,11 +1,11 @@
 <?php
 
-namespace Lexx\Messenger\Test;
+namespace Lexx\ChatMessenger\Test;
 
 use Carbon\Carbon;
-use Lexx\Messenger\Models\Models;
-use Lexx\Messenger\Models\Participant;
-use Lexx\Messenger\Models\Thread;
+use Lexx\ChatMessenger\Models\Models;
+use Lexx\ChatMessenger\Models\Participant;
+use Lexx\ChatMessenger\Models\Thread;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use ReflectionClass;
 

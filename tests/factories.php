@@ -1,16 +1,16 @@
 <?php
 
-$faktory->define(['thread', 'Lexx\Messenger\Models\Thread'], function ($f) {
+$faktory->define(['thread', 'Lexx\ChatMessenger\Models\Thread'], function ($f) {
     $f->subject = 'Sample thread';
 });
 
-$faktory->define(['message', 'Lexx\Messenger\Models\Message'], function ($f) {
+$faktory->define(['message', 'Lexx\ChatMessenger\Models\Message'], function ($f) {
     $f->user_id = 1;
     $f->thread_id = 1;
     $f->body = 'A message';
 });
 
-$faktory->define(['participant', 'Lexx\Messenger\Models\Participant'], function ($f) {
+$faktory->define(['participant', 'Lexx\ChatMessenger\Models\Participant'], function ($f) {
     $f->user_id = 1;
     $f->thread_id = 1;
 });

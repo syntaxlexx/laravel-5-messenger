@@ -1,8 +1,8 @@
 <?php
 
-namespace Lexx\Messenger\Test\Stubs\Models;
+namespace Lexx\ChatMessenger\Test\Stubs\Models;
 
-use Lexx\Messenger\Models\Message;
+use Lexx\ChatMessenger\Models\Message;
 
 class CustomMessage extends Message
 {
