@@ -118,7 +118,7 @@ class MessagesController extends Controller
         }
 
         // check if pusher is allowed
-        if(config('messenger.use_pusher')) {
+        if(config('chatmessenger.use_pusher')) {
             $this->oooPushIt($message);
         }
 
@@ -177,7 +177,7 @@ class MessagesController extends Controller
         $html = view('messenger.partials.html-message', compact('message'))->render();
 
         // check if pusher is allowed
-        if(config('messenger.use_pusher')) {
+        if(config('chatmessenger.use_pusher')) {
             $this->oooPushIt($message);
         }
 
