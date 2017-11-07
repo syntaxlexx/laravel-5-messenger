@@ -1,0 +1,50 @@
+{
+    "name": "lexxyungcarter/messenger",
+    "description": "Simple one-on-one/group messaging tool for Laravel 5 with Pusher",
+    "keywords": ["laravel", "messenger", "messaging", "user messaging", "chat", "pusher"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lexx YungCarter",
+            "email": "spencermainaa@gmail.com",
+            "homepage": "https://github.com/lexxyungcarter",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "illuminate/config": "~5.0",
+        "illuminate/support": "~5.0",
+        "illuminate/database": "~5.0",
+        "nesbot/carbon": "~1.0",
+        "pusher/pusher-php-server": "^4.0",
+        "pusher/pusher-http-laravel": "^4.0"
+    },
+    "require-dev": {
+        "adamwathan/faktory": "0.3.*",
+        "friendsofphp/php-cs-fixer": "^2.5",
+        "orchestra/testbench": "~3.0",
+        "phpunit/phpunit": "4.*|5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lexx\\Messenger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lexx\\Messenger\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lexx\\Messenger\\MessengerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
