@@ -97,7 +97,7 @@ class User extends Authenticatable {
 
 # Pusher Integration
 This package utilizes [Pusher Http Laravel](https://github.com/pusher/pusher-http-laravel) 
-that provides pusher servises out-of-the-box. All you have to do is require the package, register the service providers, publish the vendor package, and that's it! It's good to go.
+that provides pusher services out-of-the-box. All you have to do is require the package, register the service providers, publish the vendor package, and that's it! You're good to go.
 
 Please check out the examples section for a detailed example usage.
 
