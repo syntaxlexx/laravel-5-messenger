@@ -17,6 +17,9 @@ class MessengerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // add extra routes to our app
+        // include __DIR__.'/routes.php'; // leave it to others for customization
+
         $this->offerPublishing();
         $this->setMessengerModels();
         $this->setUserModel();

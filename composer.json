@@ -3,14 +3,12 @@
     "description": "Simple one-on-one/group messaging tool for Laravel 5 with Pusher",
     "keywords": ["laravel", "messenger", "messaging", "user messaging", "chat", "pusher"],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Lexx YungCarter",
-            "email": "spencermainaa@gmail.com",
-            "homepage": "https://github.com/lexxyungcarter",
-            "role": "Developer"
-        }
-    ],
+    "authors": [{
+        "name": "Lexx YungCarter",
+        "email": "spencermainaa@gmail.com",
+        "homepage": "https://github.com/lexxyungcarter",
+        "role": "Developer"
+    }],
     "require": {
         "php": ">=5.5.0",
         "illuminate/config": "~5.0",
