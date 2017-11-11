@@ -11,6 +11,7 @@ This package will allow you to add a full user messaging system into your Larave
 * Live chat features using Pusher broadcasting services
 * Ability to set maximum number of participants per thread
 * Ability to generate a unique url to share a thread to invite more users
+* Ability to star/favourite threads
 
 ## Common uses
 * Open threads (everyone can see everything)
@@ -124,6 +125,8 @@ Please check out the examples section for a detailed example usage.
 * $thread->userUnreadMessagesCount($userId) - Returns count of unread messages in thread for given user
 * $thread->getMaxParticipants() - Returns the max number of participants allowed in a thread
 * $thread->hasMaxParticipants() - Checks if the max number of participants in a thread has been reached
+* $thread->starred() - Gets threads which have been starred/favourited
+* $thread->favourites() - Gets threads which have been starred/favourited. An alias of starred()
 
 ### Message
 * $message->thread() - Thread relationship (Get a thread the message belongs to)

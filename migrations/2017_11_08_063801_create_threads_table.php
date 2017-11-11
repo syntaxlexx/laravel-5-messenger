@@ -16,6 +16,7 @@ class CreateThreadsTable extends Migration
     {
         Schema::create(Models::table('threads'), function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('starred')->default(0);
             $table->string('subject');
             $table->string('slug')->nullable()->comment('Unique slug for social media sharing. MD5 hashed string');
             $table->integer('max_participants')->nullable()->comment('Max number of participants allowed');

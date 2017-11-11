@@ -24,7 +24,7 @@ class Thread extends Eloquent
      *
      * @var array
      */
-    protected $fillable = ['subject'];
+    protected $fillable = ['subject', 'slug', 'start_date', 'end_date', 'max_participants', 'avatar', 'starred'];
 
     /**
      * The attributes that should be mutated to dates.
@@ -442,5 +442,25 @@ class Thread extends Eloquent
             return true;
         }
         return false;
+    }
+
+    /**
+     * Returns the starred threads.
+     *
+     * @return int
+     */
+    public function starred()
+    {
+        return self::where('starred', 1)->get();
+    }
+
+    /**
+     * Returns the starred threads. An alias of starred
+     *
+     * @return int
+     */
+    public function favourites()
+    {
+        return $this->starred();
     }
 }
