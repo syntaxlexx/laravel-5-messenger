@@ -1,5 +1,8 @@
 # Laravel 5 ChatMessenger (+ Pusher)
+
 This package will allow you to add a full user messaging system into your Laravel application. It is a fork of the [cmgmyr/laravel-messenger](https://github.com/cmgmyr/laravel-messenger) with added features such as maximum number of participants in a conversation, and a unique social media sharing code for inviting users to a conversation(otherwise known as Thread in this package).
+
+[![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
 
 ## Features
 * Multiple conversations per user
@@ -111,9 +114,6 @@ Please check out the examples section for a detailed example usage.
 * $thread->getAllLatest() - Returns all of the latest threads by updated_at date
 * $thread->getBySubject($subject) - Returns all threads by subject
 * $thread->participantsUserIds($userId = null) - Returns an array of user ids that are associated with the thread (with trashed)
-* $thread->scopeForUser($userId) - Returns threads that the user is associated with (returns Builder instance)
-* $thread->scopeForUserWithNewMessages($userId) - Returns threads with new messages that the user is associated with (returns Builder instance)
-* $thread->scopeBetween(array $participants) - Returns threads between given user ids(returns Builder instance)
 * $thread->addParticipant($userId) - Add users to thread as participants(also accepts array|mixed)
 * $thread->removeParticipant($userId) - Remove participants from thread(also accepts array|mixed)
 * $thread->markAsRead($userId) - Mark a thread as read for a user
@@ -132,7 +132,6 @@ Please check out the examples section for a detailed example usage.
 * $message->thread() - Thread relationship (Get a thread the message belongs to)
 * $message->user() - User relationship (Get sender of the message)
 * $message->recipients() - Recipients of this message
-* $message->scopeUnreadForUser($userId) - Returns unread messages given the userId (returns Builder instance)
 
 ### Participant
 * $participant->thread() - Thread relationship
@@ -145,10 +144,15 @@ Please check out the examples section for a detailed example usage.
 * $user->unreadMessagesCount() - Returns the new messages count for user
 * $user->threadsWithNewMessages() - Returns all threads with new messages
 
+You can also check the individual models for more information about the functions. This package also utilizes [Scopes](https://laravel.com/docs/5.5/eloquent#query-scopes) in case you need more control over your queries.
+
 ## Examples
 * [Controller](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/MessagesController.php)
 * [Routes](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/routes.php)
 * [Views](https://github.com/lexxyungcarter/laravel-5-messenger/tree/master/examples/views)
+
+## So, Where's the Demo?
+Due to our ongoing server maintenance as we migrate to the cloud, the links are currently unavailable. We hope to soon provide demo links for you :)
 
 ## Other Example Projects
 * [WIP] [Pusher](https://github.com/cmgmyr/laravel-messenger-pusher-demo)
