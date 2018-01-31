@@ -1,9 +1,16 @@
 # Laravel 5 ChatMessenger (+ Pusher)
 
-This package will allow you to add a full user messaging system into your Laravel application. It is a fork of the [cmgmyr/laravel-messenger](https://github.com/cmgmyr/laravel-messenger) with added features such as maximum number of participants in a conversation, and a unique social media sharing code for inviting users to a conversation(otherwise known as Thread in this package).
+This package will allow you to add a full user messaging system into your Laravel application. It is a highly intuitive laravel 5 chatmessenger with added features such as maximum number of participants in a conversation, starred threads, and a unique social media sharing link for inviting users to a conversation(otherwise known as Thread in this package).
 
 [![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
 
+| Version         | Compatible?   |
+| --------------- | ------------- |
+| 5.5             | Yes!          |
+| 5.4             | Yes!          |
+| 5.3             | Yes!          |
+| 5.2             | Yes!          |
+| 5.1             | Yes!          |
 ## Features
 * Multiple conversations per user
 * Optionally loop in additional users with each new message
@@ -13,7 +20,8 @@ This package will allow you to add a full user messaging system into your Larave
 * Very flexible usage so you can implement your own access control
 * Live chat features using Pusher broadcasting services
 * Ability to set maximum number of participants per thread
-* Ability to generate a unique url to share a thread to invite more users
+* Ability to generate a unique url for sharing a thread to invite more users into the conversation
+* Ability to add/remove users form a conversation - just like WhatsApp!
 * Ability to star/favourite threads
 
 ## Common uses
@@ -154,17 +162,12 @@ You can also check the individual models for more information about the function
 ## So, Where's the Demo?
 Due to our ongoing server maintenance as we migrate to the cloud, the links are currently unavailable. We hope to soon provide demo links for you :)
 
-## Other Example Projects
-* [WIP] [Pusher](https://github.com/cmgmyr/laravel-messenger-pusher-demo)
-* [WIP] [Lumen API](https://github.com/cmgmyr/lumen-messenger-api)
-
-
 ## Contributing? 
-Please contribute to the original repo at [cmgmyr/laravel-messenger](https://github.com/cmgmyr/laravel-messenger)
+Suggestions are welcome and any contributions whatsoever are highly valued. If feeling a little bit shy, feel free to send an email to [Lexx YungCarter](mailto:lexxyungcarter@gmail.com).
 
 ## Security
 
-If you discover any security related issues, please email [Chris Gmyr](mailto:cmgmyr@gmail.com) instead of using the issue tracker. Then we can pull changes from the original repo.
+If you discover any security related issues, please use the issue tracker or better yet, send an email to [Lexx YungCarter](mailto:lexxyungcarter@gmail.com).
 
 ## Credits
 
