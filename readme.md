@@ -2,10 +2,11 @@
 
 This package will allow you to add a full user messaging system into your Laravel application. It is a highly intuitive laravel 5 chatmessenger with added features such as maximum number of participants in a conversation, starred threads, and a unique social media sharing link for inviting users to a conversation(otherwise known as Thread in this package).
 
-[![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
+[![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
 
 | Version         | Compatible?   |
 | --------------- | ------------- |
+| 5.6             | Yes!          |
 | 5.5             | Yes!          |
 | 5.4             | Yes!          |
 | 5.3             | Yes!          |
@@ -68,7 +69,7 @@ Publish config:
 ```
 php artisan vendor:publish --provider="Lexx\ChatMessenger\ChatMessengerServiceProvider" --tag="config"
 ```
-	
+
 Update config file to reference your User Model:
 
 ```
@@ -84,7 +85,7 @@ Create a `users` table if you do not have one already. If you need one, the defa
 'participants_table' => 'lexx_participants',
 'threads_table' => 'lexx_threads',
 ```
-    
+
 Publish migrations:
 
 ```
@@ -108,7 +109,7 @@ class User extends Authenticatable {
 ```
 
 # Pusher Integration
-This package utilizes [Pusher Http Laravel](https://github.com/pusher/pusher-http-laravel) 
+This package utilizes [Pusher Http Laravel](https://github.com/pusher/pusher-http-laravel)
 that provides pusher services out-of-the-box. All you have to do is require the package, register the service providers, publish the vendor package, and that's it! You're good to go.
 
 Please check out the examples section for a detailed example usage.
@@ -162,7 +163,7 @@ You can also check the individual models for more information about the function
 ## So, Where's the Demo?
 Due to our ongoing server maintenance as we migrate to the cloud, the links are currently unavailable. We hope to soon provide demo links for you :)
 
-## Contributing? 
+## Contributing?
 Suggestions are welcome and any contributions whatsoever are highly valued. If feeling a little bit shy, feel free to send an email to [Lexx YungCarter](mailto:lexxyungcarter@gmail.com).
 
 ## Security

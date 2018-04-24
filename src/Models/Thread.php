@@ -32,14 +32,14 @@ class Thread extends Eloquent
      * @var array
      */
     protected $dates = ['deleted_at'];
-    
+
     /**
     * Internal cache for creator.
     *
     * @var null|Models::user()
     */
     protected $creatorCache = null;
-    
+
     /**
      * {@inheritDoc}
      */
@@ -61,11 +61,11 @@ class Thread extends Eloquent
     {
         return $this->hasMany(Models::classname(Message::class), 'thread_id', 'id');
     }
-    
+
     /**
      * Returns the latest message from a thread.
      *
-     * @return \Lexx\ChatMessenger\Models\Message
+     * @return null|\Lexx\ChatMessenger\Models\Message
      */
     public function getLatestMessageAttribute()
     {
@@ -114,22 +114,22 @@ class Thread extends Eloquent
     /**
      * Returns all of the latest threads by updated_at date.
      *
-     * @return self
+     * @return \Illuminate\Database\Query\Builder|static
      */
     public static function getAllLatest()
     {
-        return self::latest('updated_at');
+        return static::latest('updated_at');
     }
 
     /**
      * Returns all threads by subject.
      *
      * @param string $subject
-     * @return self
+     * @return \Illuminate\Database\Query\Builder|static
      */
     public static function getBySubject($subject)
     {
-        return self::where('subject', 'like', $subject)->get();
+        return static::where('subject', 'like', $subject)->get();
     }
 
     /**
@@ -155,10 +155,10 @@ class Thread extends Eloquent
     /**
      * Returns threads that the user is associated with.
      *
-     * @param Builder $query
-     * @param $userId
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param int $userId
      *
-     * @return Builder
+     * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeForUser(Builder $query, $userId)
     {
@@ -174,10 +174,10 @@ class Thread extends Eloquent
     /**
      * Returns threads with new messages that the user is associated with.
      *
-     * @param Builder $query
-     * @param $userId
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param int $userId
      *
-     * @return Builder
+     * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeForUserWithNewMessages(Builder $query, $userId)
     {
@@ -197,10 +197,10 @@ class Thread extends Eloquent
     /**
      * Returns threads between given user ids.
      *
-     * @param Builder $query
+     * @param \Illuminate\Database\Eloquent\Builder $query
      * @param array $participants
      *
-     * @return Builder
+     * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeBetween(Builder $query, array $participants)
     {
@@ -216,6 +216,8 @@ class Thread extends Eloquent
      * Add users to thread as participants.
      *
      * @param array|mixed $userId
+     *
+     * @return void
      */
     public function addParticipant($userId)
     {
@@ -233,6 +235,8 @@ class Thread extends Eloquent
      * Remove participants from thread.
      *
      * @param array|mixed $userId
+     *
+     * @return void
      */
     public function removeParticipant($userId)
     {
@@ -245,6 +249,8 @@ class Thread extends Eloquent
      * Mark a thread as read for a user.
      *
      * @param int $userId
+     *
+     * @return void
      */
     public function markAsRead($userId)
     {
@@ -286,7 +292,7 @@ class Thread extends Eloquent
      *
      * @return mixed
      *
-     * @throws ModelNotFoundException
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
      */
     public function getParticipantFromUser($userId)
     {
@@ -295,6 +301,8 @@ class Thread extends Eloquent
 
     /**
      * Restores all participants within a thread that has a new message.
+     *
+     * @return void
      */
     public function activateAllParticipants()
     {
@@ -307,7 +315,7 @@ class Thread extends Eloquent
     /**
      * Generates a string of participant information.
      *
-     * @param null  $userId
+     * @param null|int  $userId
      * @param array $columns
      *
      * @return string
@@ -335,7 +343,7 @@ class Thread extends Eloquent
     /**
      * Checks to see if a user is a current participant of the thread.
      *
-     * @param $userId
+     * @param int $userId
      *
      * @return bool
      */
@@ -352,7 +360,7 @@ class Thread extends Eloquent
     /**
      * Generates a select string used in participantsString().
      *
-     * @param $columns
+     * @param array $columns
      *
      * @return string
      */
@@ -383,7 +391,7 @@ class Thread extends Eloquent
     /**
      * Returns array of unread messages in thread for given user.
      *
-     * @param $userId
+     * @param int $userId
      *
      * @return \Illuminate\Support\Collection
      */
@@ -409,7 +417,7 @@ class Thread extends Eloquent
     /**
      * Returns count of unread messages in thread for given user.
      *
-     * @param $userId
+     * @param int $userId
      *
      * @return int
      */
@@ -418,7 +426,7 @@ class Thread extends Eloquent
         return $this->userUnreadMessages($userId)->count();
     }
 
-    
+
     /**
      * Returns the max number of participants allowed in a thread.
      *
@@ -428,7 +436,7 @@ class Thread extends Eloquent
     {
         return $this->max_participants;
     }
-    
+
     /**
      * Checks if the max number of participants in a thread has been reached.
      *

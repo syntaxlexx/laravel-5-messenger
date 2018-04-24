@@ -66,6 +66,11 @@ class ChatMessengerServiceProvider extends ServiceProvider
         }
     }
 
+    /**
+     * Define Messenger's models in registry
+     *
+     * @return void
+     */
     protected function setMessengerModels()
     {
         $config = $this->app->make('config');
@@ -81,6 +86,11 @@ class ChatMessengerServiceProvider extends ServiceProvider
         ]);
     }
 
+    /**
+     * Define User model in Messenger's model registry.
+     *
+     * @return void
+     */
     protected function setUserModel()
     {
         $config = $this->app->make('config');
