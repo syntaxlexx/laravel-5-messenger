@@ -163,7 +163,9 @@ You can also check the individual models for more information about the function
 * [Views](https://github.com/lexxyungcarter/laravel-5-messenger/tree/master/examples/views)
 
 ## So, Where's the Demo?
-[Check the DEMO here](https://messenger.acelords.space)
+- [Check the Source Code DEMO here](https://github.com/lexxyungcarter/laravel-5-messenger-demo)
+
+- [Check the LIVE DEMO here](https://messenger.acelords.space)
 
 > To get a clear picture of how it works, open two to four browsers (private/incognito mode is perfect for this case) and login with different accounts.
 
