@@ -13,6 +13,7 @@ This package will allow you to add a full user messaging system into your Larave
 | 5.3             | Yes!          |
 | 5.2             | Yes!          |
 | 5.1             | Yes!          |
+
 ## Features
 * Multiple conversations per user
 * Optionally loop in additional users with each new message
@@ -168,6 +169,8 @@ You can also check the individual models for more information about the function
 - [Check the LIVE DEMO here](https://messenger.acelords.space)
 
 > To get a clear picture of how it works, open two to four browsers (private/incognito mode is perfect for this case) and login with different accounts.
+
+![Screenshot](examples/acelords-messenger.jpg?raw=true "Screenshot")
 
 ## Contributing?
 Suggestions are welcome and any contributions whatsoever are highly valued. If feeling a little bit shy, feel free to send an email to [Lexx YungCarter](mailto:lexxyungcarter@gmail.com).
