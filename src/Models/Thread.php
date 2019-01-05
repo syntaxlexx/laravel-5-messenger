@@ -134,12 +134,33 @@ class Thread extends Eloquent
 
     /**
      * Returns an array of user ids that are associated with the thread.
+     * Deleted participants from a thread will not be returned
      *
      * @param null $userId
      *
      * @return array
      */
     public function participantsUserIds($userId = null)
+    {
+        $users = $this->participants()->select('user_id')->get()->map(function ($participant) {
+            return $participant->user_id;
+        });
+
+        if ($userId) {
+            $users->push($userId);
+        }
+
+        return $users->toArray();
+    }
+
+    /**
+     * Returns an array of user ids that are associated with the thread (including removed participants from a thread).
+     *
+     * @param null $userId
+     *
+     * @return array
+     */
+    public function participantsUserIdsWithTrashed($userId = null)
     {
         $users = $this->participants()->withTrashed()->select('user_id')->get()->map(function ($participant) {
             return $participant->user_id;
@@ -217,13 +238,13 @@ class Thread extends Eloquent
      *
      * @param array|mixed $userId
      *
-     * @return void
+     * @return boolean
      */
     public function addParticipant($userId)
     {
         $userIds = is_array($userId) ? $userId : (array) func_get_args();
 
-        collect($userIds)->each(function ($userId) {
+        return collect($userIds)->each(function ($userId) {
             Models::participant()->firstOrCreate([
                 'user_id' => $userId,
                 'thread_id' => $this->id,
@@ -236,13 +257,13 @@ class Thread extends Eloquent
      *
      * @param array|mixed $userId
      *
-     * @return void
+     * @return boolean
      */
     public function removeParticipant($userId)
     {
         $userIds = is_array($userId) ? $userId : (array) func_get_args();
 
-        Models::participant()->where('thread_id', $this->id)->whereIn('user_id', $userIds)->delete();
+        return Models::participant()->where('thread_id', $this->id)->whereIn('user_id', $userIds)->delete();
     }
 
     /**

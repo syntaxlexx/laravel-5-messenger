@@ -123,7 +123,8 @@ Please check out the examples section for a detailed example usage.
 * $thread->creator() - Returns the user object that created the thread.
 * $thread->getAllLatest() - Returns all of the latest threads by updated_at date
 * $thread->getBySubject($subject) - Returns all threads by subject
-* $thread->participantsUserIds($userId = null) - Returns an array of user ids that are associated with the thread (with trashed)
+* $thread->participantsUserIds($userId = null) - Returns an array of user ids that are associated with the thread (NO trash)
+* $thread->participantsUserIdsWithTrashed($userId = null) - Returns an array of user ids that are associated with the thread (with trashed)
 * $thread->addParticipant($userId) - Add users to thread as participants(also accepts array|mixed)
 * $thread->removeParticipant($userId) - Remove participants from thread(also accepts array|mixed)
 * $thread->markAsRead($userId) - Mark a thread as read for a user
@@ -162,7 +163,9 @@ You can also check the individual models for more information about the function
 * [Views](https://github.com/lexxyungcarter/laravel-5-messenger/tree/master/examples/views)
 
 ## So, Where's the Demo?
-Due to our ongoing server maintenance as we migrate to the cloud, the links are currently unavailable. We hope to soon provide demo links for you :)
+[Check the DEMO here](https://messenger.acelords.space)
+
+> To get a clear picture of how it works, open two to four browsers (private/incognito mode is perfect for this case) and login with different accounts.
 
 ## Contributing?
 Suggestions are welcome and any contributions whatsoever are highly valued. If feeling a little bit shy, feel free to send an email to [Lexx YungCarter](mailto:lexxyungcarter@gmail.com).

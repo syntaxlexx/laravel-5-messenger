@@ -149,7 +149,10 @@ class MessagesController extends Controller
             return redirect()->route('messages');
         }
 
-        $thread->activateAllParticipants();
+        // Restore all participants within a thread that has a new message.
+        // we do not need it since when we remove a participant we do not wish the user to receive the message.
+        // uncomment in case you need to activate all thread participants
+        // $thread->activateAllParticipants();
 
         // Message
         $message = Message::create([
@@ -170,7 +173,7 @@ class MessagesController extends Controller
         if (Input::has('recipients')) {
             // add code logic here to check if a thread has max participants set
             // utilize either $thread->getMaxParticipants()  or $thread->hasMaxParticipants()
-            
+
             $thread->addParticipant(Input::get('recipients'));
         }
 
