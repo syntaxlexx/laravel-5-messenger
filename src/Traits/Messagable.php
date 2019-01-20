@@ -62,13 +62,23 @@ trait Messagable
     }
 
     /**
+     * Returns the new messages for user.
+     *
+     * @return int
+     */
+    public function unreadMessages()
+    {
+        return Message::unreadForUser($this->getKey())->get();
+    }
+
+    /**
      * Returns the new messages count for user.
      *
      * @return int
      */
     public function unreadMessagesCount()
     {
-        return Message::unreadForUser($this->getKey())->count();
+        return count($this->unreadMessages());
     }
 
     /**
@@ -80,8 +90,8 @@ trait Messagable
     {
         return $this->threads()
             ->where(function (Builder $q) {
-                $q->whereNull(Models::table('participants') . '.last_read');
-                $q->orWhere(Models::table('threads') . '.updated_at', '>', $this->getConnection()->raw($this->getConnection()->getTablePrefix() . Models::table('participants') . '.last_read'));
-            })->get();
+                $q->whereIn(Models::table('threads') . '.id', $this->unreadMessages()->pluck('thread_id'));
+            })
+            ->get();
     }
 }
