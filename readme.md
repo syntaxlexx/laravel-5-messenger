@@ -184,5 +184,15 @@ If you discover any security related issues, please use the issue tracker or bet
 - [Lexx YungCarter](https://github.com/lexxyungcarter)
 - [Chris Gmyr](https://github.com/cmgmyr)
 
+## What's Next?
+We are on the verge of unleashing a [Vue.js](https://vuejs.org) version **+ Examples** for those of you requiring a boost in quickly setting up chatrooms/messages in your app.
+
+So:-
+- Laravel + Vue
+- Vue Standalone App (Node)
+- Flutter Standalone Android App
+
+Should you be so greatful to provide code samples, feel free to share your code/repository with us. Thank you in advance!
+
 ### Special Thanks
 This package used [cmgmyr/laravel-messenger](https://github.com/cmgmyr/laravel-messenger) as a starting point, which in turn initially used [AndreasHeiberg/laravel-messenger](https://github.com/AndreasHeiberg/laravel-messenger) as a starting point.
