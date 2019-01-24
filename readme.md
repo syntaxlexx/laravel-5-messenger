@@ -24,7 +24,7 @@ This package will allow you to add a full user messaging system into your Larave
 * Live chat features using Pusher broadcasting services
 * Ability to set maximum number of participants per thread
 * Ability to generate a unique url for sharing a thread to invite more users into the conversation
-* Ability to add/remove users form a conversation - just like WhatsApp!
+* Ability to add/remove users from a conversation - just like WhatsApp!
 * Ability to star/favourite threads
 
 ## Common uses
