@@ -2,14 +2,14 @@
 
 namespace Lexx\ChatMessenger\Test;
 
-use Carbon\Carbon;
 use Lexx\ChatMessenger\Models\Thread;
 use Lexx\ChatMessenger\Traits\Messagable;
 use Illuminate\Database\Eloquent\Model as Eloquent;
+use Illuminate\Support\Carbon;
 
 class MessagableTraitTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         Eloquent::unguard();

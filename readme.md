@@ -6,13 +6,17 @@ This package will allow you to add a full user messaging system into your Larave
 
 | Version         | Compatible?   |
 | --------------- | ------------- |
+| 5.8             | Yes!          |
 | 5.7             | Yes!          |
 | 5.6             | Yes!          |
-| 5.5             | Yes!          |
-| 5.4             | Yes!          |
-| 5.3             | Yes!          |
-| 5.2             | Yes!          |
-| 5.1             | Yes!          |
+
+
+| Version         | Compatible Version |
+| 5.5             | v1 [1.0.8]         |
+| 5.4             | v1 [1.0.8]         |
+| 5.3             | v1 [1.0.8]         |
+| 5.2             | v1 [1.0.8]         |
+| 5.1             | v1 [1.0.8]         |
 
 ## Features
 * Multiple conversations per user
@@ -34,17 +38,23 @@ This package will allow you to add a full user messaging system into your Larave
 * Push messages to view without having to refresh the page
 * Have a maximum number of participants in a thread/conversation
 
-## Installation (Laravel 4.x)
+## Installation (Laravel 4.x - no longer actively supported)
 Installation instructions for Laravel 4 can be [found here](https://github.com/cmgmyr/laravel-messenger/tree/v1).
 
 ## Installation (Laravel 5.x)
-```
+### Laravel 5.6+
+```bash
 composer require lexxyungcarter/chatmessenger
+```
+
+### Laravel 5.1 > 5.5
+```bash
+composer require lexxyungcarter/chatmessenger@1.0.8
 ```
 
 Or place manually in composer.json:
 
-```
+```php
 "require": {
     "lexxyungcarter/chatmessenger": "^1.0"
 }
@@ -56,6 +66,9 @@ Run:
 composer update
 ```
 
+#### >>> If using Laravel 5.4 and below
+> **Note**: Laravel Messenger supports [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery). If using Laravel 5.5 and above, skip this part.
+
 Add the service provider to `config/app.php` under `providers`:
 
 ```php
@@ -64,17 +77,15 @@ Add the service provider to `config/app.php` under `providers`:
 ],
 ```
 
-> **Note**: If you are using Laravel 5.5, this step is unnecessary. Laravel Messenger supports [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery).
-
 Publish config:
 
-```
+```php
 php artisan vendor:publish --provider="Lexx\ChatMessenger\ChatMessengerServiceProvider" --tag="config"
 ```
 
 Update config file to reference your User Model:
 
-```
+```php
 config/chatmessenger.php
 ```
 

@@ -2,16 +2,16 @@
 
 namespace Lexx\ChatMessenger\Test;
 
-use Carbon\Carbon;
 use Lexx\ChatMessenger\Models\Models;
 use Lexx\ChatMessenger\Models\Participant;
 use Lexx\ChatMessenger\Models\Thread;
 use Illuminate\Database\Eloquent\Model as Eloquent;
+use Illuminate\Support\Carbon;
 use ReflectionClass;
 
 class EloquentThreadTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         Eloquent::unguard();
