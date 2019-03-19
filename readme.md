@@ -11,7 +11,7 @@ This package will allow you to add a full user messaging system into your Larave
 | 5.6             | Yes!          |
 
 
-| Version         | Compatible Version |
+| Version         | Compatible Branch  |
 | --------------- | ------------------ |
 | 5.5             | v1 [1.0.8]         |
 | 5.4             | v1 [1.0.8]         |
