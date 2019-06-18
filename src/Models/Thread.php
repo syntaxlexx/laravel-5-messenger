@@ -332,7 +332,35 @@ class Thread extends Eloquent
             $participant->restore();
         }
     }
+    
+    /**
+     * Generates a total count of participant.
+     *
+     * @param null|int  $userId
+     * @param array $columns
+     *
+     * @return int
+     */
+    public function participantsCount($userId = null, $columns = ['name'])
+    {
+        $participantsTable = Models::table('participants');
+        $usersTable = Models::table('users');
+        $userPrimaryKey = Models::user()->getKeyName();
 
+        $selectString = $this->createSelectString($columns);
+
+        $participantNames = $this->getConnection()->table($usersTable)
+            ->join($participantsTable, $usersTable . '.' . $userPrimaryKey, '=', $participantsTable . '.user_id')
+            ->where($participantsTable . '.thread_id', $this->id)
+            ->select($this->getConnection()->raw($selectString));
+
+        if ($userId !== null) {
+            $participantNames->where($usersTable . '.' . $userPrimaryKey, '!=', $userId);
+        }
+
+        return $participantNames->count();
+    }
+    
     /**
      * Generates a string of participant information.
      *
@@ -346,7 +374,7 @@ class Thread extends Eloquent
         $participantsTable = Models::table('participants');
         $usersTable = Models::table('users');
         $userPrimaryKey = Models::user()->getKeyName();
-
+        
         $selectString = $this->createSelectString($columns);
 
         $participantNames = $this->getConnection()->table($usersTable)
