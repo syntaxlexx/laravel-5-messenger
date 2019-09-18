@@ -346,6 +346,7 @@ class Thread extends Eloquent
         $participantsTable = Models::table('participants');
         $usersTable = Models::table('users');
         $userPrimaryKey = Models::user()->getKeyName();
+        $userName = Models::user()->name;
 
         $selectString = $this->createSelectString($columns);
 
@@ -358,7 +359,7 @@ class Thread extends Eloquent
             $participantNames->where($usersTable . '.' . $userPrimaryKey, '!=', $userId);
         }
 
-        return $participantNames->implode('name', ', ');
+        return $participantNames->implode($userName, ', ');
     }
 
     /**
