@@ -1,6 +1,6 @@
 {
     "name": "lexxyungcarter/chatmessenger",
-    "description": "Simple one-to-one/group chat messaging tool for Laravel 5 with Pusher",
+    "description": "Simple one-to-one/group chat messaging tool for Laravel 5 & 6 with Pusher Integration",
     "keywords": ["laravel", "chat", "messenger", "messaging", "user messaging", "chat", "pusher"],
     "license": "MIT",
     "authors": [
