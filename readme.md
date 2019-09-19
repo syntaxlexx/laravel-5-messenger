@@ -1,6 +1,6 @@
-# Laravel 5 ChatMessenger (+ Pusher)
+# Laravel 5 & 6 ChatMessenger (+ Pusher)
 
-This package will allow you to add a full user messaging system into your Laravel application. It is a highly intuitive laravel 5 chatmessenger with added features such as maximum number of participants in a conversation, starred threads, and a unique social media sharing link for inviting users to a conversation(otherwise known as Thread in this package).
+This package will allow you to add a full user messaging system into your Laravel application. It is a highly intuitive laravel 5/6 chatmessenger with added features such as maximum number of participants in a conversation, starred threads, and a unique social media sharing link for inviting users to a conversation(otherwise known as Thread in this package).
 
 [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
 
