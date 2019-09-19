@@ -94,4 +94,31 @@ trait Messagable
             })
             ->get();
     }
+    
+    /**
+     * Returns the user's starred threads.
+     *
+     * @return int
+     */
+    public function starred()
+    {
+        return $this->hasManyThrough(
+            Models::table('threads'),
+            Models::table('participants'),
+            'thread_id',
+            'user_id',
+            'id',
+            'id'
+        );
+    }
+    
+    /**
+     * Returns the starred threads. An alias of starred
+     *
+     * @return int
+     */
+    public function favourites()
+    {
+        return $this->starred();
+    }
 }

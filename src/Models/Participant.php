@@ -21,7 +21,7 @@ class Participant extends Eloquent
      *
      * @var array
      */
-    protected $fillable = ['thread_id', 'user_id', 'last_read'];
+    protected $fillable = ['thread_id', 'user_id', 'last_read', 'starred'];
 
     /**
      * The attributes that should be mutated to dates.
@@ -29,7 +29,16 @@ class Participant extends Eloquent
      * @var array
      */
     protected $dates = ['deleted_at', 'last_read'];
-
+    
+    /**
+     * attributes that should be cast
+     *
+     * @var array
+     */
+    protected $casts = [
+        'starred' => 'boolean',
+    ];
+    
     /**
      * {@inheritDoc}
      */

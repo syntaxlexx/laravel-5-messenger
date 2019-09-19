@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class Thread extends Eloquent
 {
@@ -24,7 +25,7 @@ class Thread extends Eloquent
      *
      * @var array
      */
-    protected $fillable = ['subject', 'slug', 'start_date', 'end_date', 'max_participants', 'avatar', 'starred'];
+    protected $fillable = ['subject', 'slug', 'start_date', 'end_date', 'max_participants', 'avatar'];
 
     /**
      * The attributes that should be mutated to dates.
@@ -346,7 +347,6 @@ class Thread extends Eloquent
         $participantsTable = Models::table('participants');
         $usersTable = Models::table('users');
         $userPrimaryKey = Models::user()->getKeyName();
-        $userName = Models::user()->name;
 
         $selectString = $this->createSelectString($columns);
 
@@ -359,7 +359,7 @@ class Thread extends Eloquent
             $participantNames->where($usersTable . '.' . $userPrimaryKey, '!=', $userId);
         }
 
-        return $participantNames->implode($userName, ', ');
+        return $participantNames->implode('name', ', ');
     }
 
     /**
@@ -473,24 +473,59 @@ class Thread extends Eloquent
         }
         return false;
     }
-
+    
     /**
-     * Returns the starred threads.
+     * star/favourite a thread
      *
-     * @return int
+     * @param null $userId
+     *
+     * @return mixed
      */
-    public function starred()
+    public function star($userId = null)
     {
-        return self::where('starred', 1)->get();
+        if(! $userId)
+            $userId = Auth::id();
+        
+        return $this->participants()
+            ->where('user_id', $userId)
+            ->firstOrFail()
+            ->update(['starred' => true]);
     }
-
+    
     /**
-     * Returns the starred threads. An alias of starred
+     * unstar/unfavourite a thread
      *
-     * @return int
+     * @param null $userId
+     *
+     * @return mixed
      */
-    public function favourites()
+    public function unstar($userId = null)
     {
-        return $this->starred();
+        if(! $userId)
+            $userId = Auth::id();
+        
+        return $this->participants()
+            ->where('user_id', $userId)
+            ->firstOrFail()
+            ->update(['starred' => false]);
     }
+    
+    /**
+     * check if the thread has been starred
+     *
+     * @param null $userId
+     *
+     * @return bool
+     */
+    public function getIsStarredAttribute($userId = null)
+    {
+        if(! $userId)
+            $userId = Auth::id();
+        
+        return !! $this->participants()
+            ->where('user_id', $userId)
+            ->firstOrFail()
+            ->starred;
+    }
+    
 }

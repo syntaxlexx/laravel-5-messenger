@@ -23,5 +23,5 @@ return [
      * Define custom database table names - without prefixes.
     */
 
-    'use_pusher' => false,
+    'use_pusher' => env('CHATMESSENGER_USE_PUSHER', false),
 ];
