@@ -129,8 +129,8 @@ trait Messagable
      */
     public function getNameAttribute()
     {
-        if($this->name)
-            return $this->name;
+        if($this->attributes['name'])
+            return $this->attributes['name'];
         
         if($this->username)
             return $this->username;
