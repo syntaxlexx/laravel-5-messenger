@@ -192,9 +192,13 @@ Same case applied to unstarring a thread. `$thread->unstar()`.
 You can also check the individual models for more information about the functions. This package also utilizes [Scopes](https://laravel.com/docs/5.5/eloquent#query-scopes) in case you need more control over your queries.
 
 ## Examples
-* [Controller](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/MessagesController.php)
-* [Routes](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/routes.php)
+* [Controller - MessagesController](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/MessagesController.php)
+* [Controller - ThreadController](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/ThreadController.php)
+* [Event - MessageWasPosted](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/Events/MessageWasPosted.php)
+* [Routes - web](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/routes/web.php)
+* [Routes - channel](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/routes/channels.php)
 * [Views](https://github.com/lexxyungcarter/laravel-5-messenger/tree/master/examples/views)
+* [Composer.json Sample](https://github.com/lexxyungcarter/laravel-5-messenger/tree/master/examples/composer.json)
 
 ## So, Where's the Demo?
 - [Check the Source Code DEMO here](https://github.com/lexxyungcarter/laravel-5-messenger-demo)

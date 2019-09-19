@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MessageWasComposed;
 use App\User;
 use Carbon\Carbon;
 use Lexx\ChatMessenger\Models\Message;
@@ -9,9 +10,8 @@ use Lexx\ChatMessenger\Models\Participant;
 use Lexx\ChatMessenger\Models\Thread;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
-use Pusher; // Pusher\Laravel\Facades\Pusher
+use Illuminate\Http\Request;
 
 
 class MessagesController extends Controller
@@ -31,10 +31,10 @@ class MessagesController extends Controller
     public function index()
     {
         // All threads, ignore deleted/archived participants
-        $threads = Thread::getAllLatest()->get();
+        // $threads = Thread::getAllLatest()->get();
 
         // All threads that user is participating in
-        // $threads = Thread::forUser(Auth::id())->latest('updated_at')->get();
+        $threads = Thread::forUser(Auth::id())->latest('updated_at')->get();
 
         // All threads that user is participating in, with new messages
         // $threads = Thread::forUserWithNewMessages(Auth::id())->latest('updated_at')->get();
@@ -87,9 +87,9 @@ class MessagesController extends Controller
      *
      * @return mixed
      */
-    public function store()
+    public function store(Request $request)
     {
-        $input = Input::all();
+        $input = $request->all();
 
         $thread = Thread::create([
             'subject' => $input['subject'],
@@ -110,7 +110,7 @@ class MessagesController extends Controller
         ]);
 
         // Recipients
-        if (Input::has('recipients')) {
+        if ($request->has('recipients')) {
             // add code logic here to check if a thread has max participants set
             // utilize either $thread->getMaxParticipants()  or $thread->hasMaxParticipants()
 
@@ -118,11 +118,11 @@ class MessagesController extends Controller
         }
 
         // check if pusher is allowed
-        if(config('chatmessenger.use_pusher')) {
+        if (config('chatmessenger.use_pusher')) {
             $this->oooPushIt($message);
         }
 
-        if(request()->ajax()) {
+        if (request()->ajax()) {
             return response()->json([
                 'status' => 'OK',
                 'message' => $message,
@@ -139,7 +139,7 @@ class MessagesController extends Controller
      * @param $id
      * @return mixed
      */
-    public function update($id)
+    public function update(Request $request, $id)
     {
         try {
             $thread = Thread::findOrFail($id);
@@ -150,15 +150,14 @@ class MessagesController extends Controller
         }
 
         // Restore all participants within a thread that has a new message.
-        // we do not need it since when we remove a participant we do not wish the user to receive the message.
-        // uncomment in case you need to activate all thread participants
+        // we do not need it since when we remove a participant we do not wish the user to receive the message
         // $thread->activateAllParticipants();
 
         // Message
         $message = Message::create([
             'thread_id' => $thread->id,
             'user_id' => Auth::id(),
-            'body' => Input::get('message'),
+            'body' => $request->get('message'),
         ]);
 
         // Add replier as a participant
@@ -170,21 +169,21 @@ class MessagesController extends Controller
         $participant->save();
 
         // Recipients
-        if (Input::has('recipients')) {
+        if ($request->has('recipients')) {
             // add code logic here to check if a thread has max participants set
             // utilize either $thread->getMaxParticipants()  or $thread->hasMaxParticipants()
 
-            $thread->addParticipant(Input::get('recipients'));
+            $thread->addParticipant($request->get('recipients'));
         }
 
         $html = view('messenger.partials.html-message', compact('message'))->render();
 
         // check if pusher is allowed
-        if(config('chatmessenger.use_pusher')) {
+        if (config('chatmessenger.use_pusher')) {
             $this->oooPushIt($message);
         }
 
-        if(request()->ajax()) {
+        if (request()->ajax()) {
             return response()->json([
                 'status' => 'OK',
                 'message' => $message,
@@ -200,6 +199,7 @@ class MessagesController extends Controller
      * Send the new message to Pusher in order to notify users.
      *
      * @param Message $message
+     * @return void
      */
     protected function oooPushIt(Message $message, $html = '')
     {
@@ -224,12 +224,15 @@ class MessagesController extends Controller
                     continue;
                 }
 
-                $pusher_resp = Pusher::trigger(['for_user_' . $recipient], 'new_message', $data);
+                // previous way of doing it
+                // $pusher_resp = Pusher::trigger(['for_user_' . $recipient], 'new_message', $data);
+                
+                // new way of doing it
+                event(new MessageWasComposed($recipient, $data));
+                
                 // We're done here - how easy was that, it just works!
             }
         }
-
-        return $pusher_resp;
     }
 
     /**
