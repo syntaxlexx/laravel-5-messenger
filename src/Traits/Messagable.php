@@ -121,4 +121,24 @@ trait Messagable
     {
         return $this->starred();
     }
+
+    /**
+     * Get name to use. Should be overridden in model to reflect your project
+     * 
+     * @return string $name
+     */
+    public function getNameAttribute()
+    {
+        if($this->name)
+            return $this->name;
+        
+        if($this->username)
+            return $this->username;
+        
+        if($this->first_name)
+            return $this->first_name;
+
+        // if none is found, just return the email
+        return $this->email;
+    }
 }

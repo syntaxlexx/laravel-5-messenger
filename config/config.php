@@ -24,4 +24,17 @@ return [
     */
 
     'use_pusher' => env('CHATMESSENGER_USE_PUSHER', false),
+
+    /**
+     * 
+     */
+    'defaults' => [
+
+        /**
+         * specify the default column to use in getting participant names 
+         * $thread->participantsString($userId, $columns = [])
+         */
+        'participant_aka' => env('CHATMESSENGER_PARTICIPANT_AKA', 'name'),
+        
+    ]
 ];

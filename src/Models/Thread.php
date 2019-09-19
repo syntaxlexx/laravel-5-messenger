@@ -342,11 +342,14 @@ class Thread extends Eloquent
      *
      * @return string
      */
-    public function participantsString($userId = null, $columns = ['name'])
+    public function participantsString($userId = null, $columns = [])
     {
         $participantsTable = Models::table('participants');
         $usersTable = Models::table('users');
         $userPrimaryKey = Models::user()->getKeyName();
+
+        if(empty($columns))
+            $columns = [config('chatmessenger.defaults.participant_aka')];
 
         $selectString = $this->createSelectString($columns);
 
