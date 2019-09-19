@@ -163,7 +163,7 @@ Same case applied to unstarring a thread. `$thread->unstar()`.
 * $thread->markAsRead($userId) - Mark a thread as read for a user
 * $thread->isUnread($userId) - See if the current thread is unread by the user
 * $thread->activateAllParticipants() - Restores all participants within a thread that has a new message
-* $thread->participantsString($userId = null, $columns = ['name']) - Generates a string of participant information
+* $thread->participantsString($userId = null, $columns = ['name']) - Generates a string of participant information (The columns here reflect the DB columns in the users table to use when returning the names of participants).
 * $thread->hasParticipant($userId) - Checks to see if a user is a current participant of the thread
 * $thread->userUnreadMessages($userId) - Returns array of unread messages in thread for given user
 * $thread->userUnreadMessagesCount($userId) - Returns count of unread messages in thread for given user
