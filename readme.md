@@ -6,6 +6,7 @@ This package will allow you to add a full user messaging system into your Larave
 
 | Version         | Compatible?   |
 | --------------- | ------------- |
+| 6.0             | Yes!          |
 | 5.8             | Yes!          |
 | 5.7             | Yes!          |
 | 5.6             | Yes!          |
@@ -123,10 +124,29 @@ class User extends Authenticatable {
 ```
 
 # Pusher Integration
-This package utilizes [Pusher Http Laravel](https://github.com/pusher/pusher-http-laravel)
+This package utilizes [pusher/pusher-php-server](https://github.com/pusher/pusher-php-server)
 that provides pusher services out-of-the-box. All you have to do is require the package, register the service providers, publish the vendor package, and that's it! You're good to go.
 
 Please check out the examples section for a detailed example usage.
+
+## Breaking Changes:
+### Deprecated Packages
+Since [Pusher Http Laravel](https://github.com/pusher/pusher-http-laravel) has been deprecated, the current 
+demo uses the latest Laravel 5/6 trends of Broadcasting via events. Checkout [THE DEMO](https://github.com/lexxyungcarter/laravel-5-messenger-demo)
+to see it in action. It becomes more manageable and expressive to configure channels individually.
+> If you plan to migrate to Laravel 6, the Pusher Http Laravel deprecated package will prohibit you due to dependency issues.
+> You will simply need to create an event to fire the broadcast message, and a channel for broadcasting. You can check the demo 
+>for practical usage.
+
+### Migration to v1.2
+As pointed out in this [issue](https://github.com/lexxyungcarter/laravel-5-messenger/issues/10#issue-471480046), the starred
+property has been moved from `threads` table to the `participants` table as it makes much more sense there. 
+(Credits to [snarcraft](https://github.com/snarcraft)).
+> run `php artisan vendor:publish --provider="Lexx\ChatMessenger\ChatMessengerServiceProvider" --tag="migrations"` to copy migration file,
+> then run `php artisan migrate`. 
+
+Starring a thread is as easy as calling the `star()` method on the thread. If no userId is passed, it defaults to the currently logged-in user. 
+Same case applied to unstarring a thread. `$thread->unstar()`.
 
 # API list with Usage Examples
 ### Thread
@@ -149,8 +169,9 @@ Please check out the examples section for a detailed example usage.
 * $thread->userUnreadMessagesCount($userId) - Returns count of unread messages in thread for given user
 * $thread->getMaxParticipants() - Returns the max number of participants allowed in a thread
 * $thread->hasMaxParticipants() - Checks if the max number of participants in a thread has been reached
-* $thread->starred() - Gets threads which have been starred/favourited
-* $thread->favourites() - Gets threads which have been starred/favourited. An alias of starred()
+* $thread->star($userId = null) - Star/favourite a thread (if no $userId is passed, it defaults to the logged-in user)
+* $thread->unstar($userId = null) - Unstar/unfavourite a thread (if no $userId is passed, it defaults to the logged-in user)
+* $thread->isStarred - check if thread has been starred
 
 ### Message
 * $message->thread() - Thread relationship (Get a thread the message belongs to)
