@@ -4,9 +4,11 @@ This package will allow you to add a full user messaging system into your Larave
 
 [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
 
+<a href="https://patreon.com/lexxyungcarter"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Patreon donate button" /> </a>
+
 | Version         | Compatible?   |
 | --------------- | ------------- |
-| 6.0             | Yes!          |
+| 6.x             | Yes!          |
 | 5.8             | Yes!          |
 | 5.7             | Yes!          |
 | 5.6             | Yes!          |
@@ -19,6 +21,8 @@ This package will allow you to add a full user messaging system into your Larave
 | 5.3             | v1 [1.0.8]         |
 | 5.2             | v1 [1.0.8]         |
 | 5.1             | v1 [1.0.8]         |
+
+> Get on to voting for a tailwind/vue.js/vuerouter version of the project
 
 ## Features
 * Multiple conversations per user
@@ -39,6 +43,11 @@ This package will allow you to add a full user messaging system into your Larave
 * One to one messaging (private or direct thread)
 * Push messages to view without having to refresh the page
 * Have a maximum number of participants in a thread/conversation
+
+## Crowdfunding
+It's also possible to support the project on [Patreon](https://www.patreon.com/lexxyungcarter) or by buying products and merchandise at [Marketplace](https://marketplace.acelords.space).
+
+This funding is used for maintaining the project and adding new features into Code Style plus other open-source repositories.
 
 ## Installation (Laravel 4.x - no longer actively supported)
 Installation instructions for Laravel 4 can be [found here](https://github.com/cmgmyr/laravel-messenger/tree/v1).
