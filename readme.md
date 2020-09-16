@@ -4,7 +4,18 @@ This package will allow you to add a full user messaging system into your Larave
 
 [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
 
+
+## Donating to the project
+If you've found this useful and would like to buy the maintainers a coffee (or a Tesla, we're not picky), feel free to do so.
+
 <a href="https://patreon.com/lexxyungcarter"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Patreon donate button" /> </a>
+
+<a href="https://ko-fi.com/acelords" target="_blank" title="Buy me a Coffee"><img width="150" style="border:0px;width:150px;display:block;margin:0 auto" src="https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a>
+
+Or by buying products and merchandise at [Marketplace](https://store.acelords.space).
+
+This funding is used for maintaining the project and adding new features into Code Style plus other open-source repositories.
+
 
 | Version         | Compatible?   |
 | --------------- | ------------- |
@@ -45,10 +56,6 @@ This package will allow you to add a full user messaging system into your Larave
 * Push messages to view without having to refresh the page
 * Have a maximum number of participants in a thread/conversation
 
-## Crowdfunding
-It's also possible to support the project on [Patreon](https://www.patreon.com/lexxyungcarter) or by buying products and merchandise at [Marketplace](https://marketplace.acelords.space).
-
-This funding is used for maintaining the project and adding new features into Code Style plus other open-source repositories.
 
 ## Installation (Laravel 4.x - no longer actively supported)
 Installation instructions for Laravel 4 can be [found here](https://github.com/cmgmyr/laravel-messenger/tree/v1).
