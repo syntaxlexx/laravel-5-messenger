@@ -17,8 +17,9 @@ Or by buying products and merchandise at [Marketplace](https://store.acelords.sp
 This funding is used for maintaining the project and adding new features into Code Style plus other open-source repositories.
 
 
-| Version         | Compatible?   |
+| Laravel Version | Compatible?   |
 | --------------- | ------------- |
+| 8.x             | Yes! (^1.3.0) |
 | 7.x             | Yes! (^1.3.0) |
 | 6.x             | Yes! (^1.2.0) |
 | 5.8             | Yes!          |
@@ -26,7 +27,7 @@ This funding is used for maintaining the project and adding new features into Co
 | 5.6             | Yes!          |
 
 
-| Version         | Compatible Branch  |
+| Laravel Version | Compatible Branch  |
 | --------------- | ------------------ |
 | 5.5             | v1 [1.0.8]         |
 | 5.4             | v1 [1.0.8]         |
