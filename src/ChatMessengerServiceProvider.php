@@ -95,8 +95,8 @@ class ChatMessengerServiceProvider extends ServiceProvider
     {
         $config = $this->app->make('config');
 
-        $model = $config->get('auth.providers.users.model', function () use ($config) {
-            return $config->get('auth.model', $config->get('chatmessenger.user_model'));
+        $model = $config->get('chatmessenger.user_model') ?? $config->get('auth.providers.users.model', function () use ($config) {
+            return $config->get('auth.model');
         });
 
         Models::setUserModel($model);
