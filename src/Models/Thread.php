@@ -328,7 +328,7 @@ class Thread extends Eloquent
      */
     public function activateAllParticipants()
     {
-        $participants = $this->participants()->withTrashed()->get();
+        $participants = $this->participants()->onlyTrashed()->get();
         foreach ($participants as $participant) {
             $participant->restore();
         }

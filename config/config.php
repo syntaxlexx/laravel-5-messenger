@@ -2,7 +2,7 @@
 
 return [
 
-    'user_model' => App\User::class,
+    'user_model' => config('auth.providers.users.model'),
 
     'message_model' => Lexx\ChatMessenger\Models\Message::class,
 
