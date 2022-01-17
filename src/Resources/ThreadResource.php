@@ -14,6 +14,8 @@ class ThreadResource extends JsonResource
      */
     public function toArray($request)
     {
+        $creator = $this->creator();
+
         return [
             'id'                => (int) $this->id,
             'subject'           => $this->subject,
@@ -29,8 +31,9 @@ class ThreadResource extends JsonResource
 
             'unread_count'      => $this->userUnreadMessagesCount(auth()->id()),
             'latest_message'    => optional($this->latestMessage)->body ?? null,
-            'creator'           => optional($this->creator())->name,
-            'creator_avatar'    => optional($this->creator())->avatar_url,
+            'creator_id'        => $creator->id ?? null,
+            'creator_name'      => $creator->name ?? null,
+            'creator_avatar'    => $creator->avatar_url ?? null,
             'participants'      => $this->participantsString(auth()->id()),
 
             'messages'          => MessageResource::collection($this->whenLoaded('messages')),
