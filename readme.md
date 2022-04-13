@@ -228,6 +228,11 @@ You can also check the individual models for more information about the function
 
 ![Screenshot](examples/acelords-messenger.jpg?raw=true "Screenshot")
 
+### Latest Demo
+We have a [New Demo Version](https://messenger-inertia.acelords.space) that features the common Laravel Jetstream + Inertia stack.
+![Screenshot 1](https://github.com/acelords/laravel-messenger-demo-inertia/blob/main/screenshots/messenger-admin-4.png?raw=true "Screenshot")
+
+
 ## Contributing?
 Suggestions are welcome and any contributions whatsoever are highly valued. If feeling a little bit shy, feel free to send an email to [Lexx YungCarter](mailto:lexxyungcarter@gmail.com).
 
