@@ -167,6 +167,24 @@ property has been moved from `threads` table to the `participants` table as it m
 Starring a thread is as easy as calling the `star()` method on the thread. If no userId is passed, it defaults to the currently logged-in user. 
 Same case applied to unstarring a thread. `$thread->unstar()`.
 
+
+## So, Where's the Demo?
+- [Check the Source Code DEMO here](https://github.com/lexxyungcarter/laravel-5-messenger-demo)
+
+- [Check the LIVE DEMO here](https://messenger.acelords.space)
+
+> To get a clear picture of how it works, open two to four browsers (private/incognito mode is perfect for this case) and login with different accounts.
+
+![Screenshot](examples/acelords-messenger.jpg?raw=true "Screenshot")
+
+### Latest Demo
+We have a [New Demo Version](https://messenger-inertia.acelords.space) that features the common Laravel Jetstream + Inertia stack.
+- [Check the LIVE DEMO here](https://messenger-inertia.acelords.space)
+- [Check the Source Code DEMO here](https://github.com/acelords/laravel-messenger-demo-inertia)
+
+
+![Screenshot 1](https://github.com/acelords/laravel-messenger-demo-inertia/blob/main/screenshots/messenger-admin-4.png?raw=true "Screenshot")
+
 # API list with Usage Examples
 ### Thread
 * $thread->messages() - Messages relationship
@@ -218,23 +236,6 @@ You can also check the individual models for more information about the function
 * [Routes - channel](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/routes/channels.php)
 * [Views](https://github.com/lexxyungcarter/laravel-5-messenger/tree/master/examples/views)
 * [Composer.json Sample](https://github.com/lexxyungcarter/laravel-5-messenger/tree/master/examples/composer.json)
-
-## So, Where's the Demo?
-- [Check the Source Code DEMO here](https://github.com/lexxyungcarter/laravel-5-messenger-demo)
-
-- [Check the LIVE DEMO here](https://messenger.acelords.space)
-
-> To get a clear picture of how it works, open two to four browsers (private/incognito mode is perfect for this case) and login with different accounts.
-
-![Screenshot](examples/acelords-messenger.jpg?raw=true "Screenshot")
-
-### Latest Demo
-We have a [New Demo Version](https://messenger-inertia.acelords.space) that features the common Laravel Jetstream + Inertia stack.
-- [Check the LIVE DEMO here](https://messenger-inertia.acelords.space)
-- [Check the Source Code DEMO here](https://github.com/acelords/laravel-messenger-demo-inertia)
-
-
-![Screenshot 1](https://github.com/acelords/laravel-messenger-demo-inertia/blob/main/screenshots/messenger-admin-4.png?raw=true "Screenshot")
 
 
 ## Contributing?
