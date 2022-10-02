@@ -4,6 +4,10 @@ This package will allow you to add a full user messaging system into your Larave
 
 [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
 
+- [Check the Latest LIVE DEMO here](https://messenger-inertia.acelords.space)
+- [Find the Latest Source Code DEMO here](https://github.com/acelords/laravel-messenger-demo-inertia)
+
+![Screenshot 1](https://github.com/acelords/laravel-messenger-demo-inertia/blob/main/screenshots/messenger-admin-4.png?raw=true "Screenshot")
 
 ## Donating to the project
 If you've found this useful and would like to buy the maintainers a coffee (or a Tesla, we're not picky), feel free to do so.
@@ -63,7 +67,7 @@ This funding is used for maintaining the project and adding new features into Co
 Installation instructions for Laravel 4 can be [found here](https://github.com/cmgmyr/laravel-messenger/tree/v1).
 
 ## Installation (Laravel 5.x)
-### Laravel 5.6+
+### Laravel 5.6+ onwards
 ```bash
 composer require lexxyungcarter/chatmessenger
 ```
