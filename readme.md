@@ -4,7 +4,7 @@ This package will allow you to add a full user messaging system into your Larave
 
 [![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
 
-- [Check the Latest LIVE DEMO here](https://messenger-inertia.acelords.space)
+- [Check the Latest LIVE DEMO here](https://messenger-inertia.acelords.com)
 - [Find the Latest Source Code DEMO here](https://github.com/acelords/laravel-messenger-demo-inertia)
 
 ![Screenshot 1](https://github.com/acelords/laravel-messenger-demo-inertia/blob/main/screenshots/messenger-admin-4.png?raw=true "Screenshot")
@@ -16,7 +16,7 @@ If you've found this useful and would like to buy the maintainers a coffee (or a
 
 <a href="https://ko-fi.com/acelords" target="_blank" title="Buy me a Coffee"><img width="150" style="border:0px;width:150px;display:block;margin:0 auto" src="https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0" border="0" alt="Buy Me a Coffee at ko-fi.com" /></a>
 
-Or by buying products and merchandise at [Marketplace](https://store.acelords.space).
+Or by buying products and merchandise at [Marketplace](https://store.acelords.com).
 
 This funding is used for maintaining the project and adding new features into Code Style plus other open-source repositories.
 
@@ -175,15 +175,15 @@ Same case applied to unstarring a thread. `$thread->unstar()`.
 ## So, Where's the Demo?
 - [Check the Source Code DEMO here](https://github.com/lexxyungcarter/laravel-5-messenger-demo)
 
-- [Check the LIVE DEMO here](https://messenger.acelords.space)
+- [Check the LIVE DEMO here](https://messenger.acelords.com)
 
 > To get a clear picture of how it works, open two to four browsers (private/incognito mode is perfect for this case) and login with different accounts.
 
 ![Screenshot](examples/acelords-messenger.jpg?raw=true "Screenshot")
 
 ### Latest Demo
-We have a [New Demo Version](https://messenger-inertia.acelords.space) that features the common Laravel Jetstream + Inertia stack.
-- [Check the LIVE DEMO here](https://messenger-inertia.acelords.space)
+We have a [New Demo Version](https://messenger-inertia.acelords.com) that features the common Laravel Jetstream + Inertia stack.
+- [Check the LIVE DEMO here](https://messenger-inertia.acelords.com)
 - [Check the Source Code DEMO here](https://github.com/acelords/laravel-messenger-demo-inertia)
 
 
