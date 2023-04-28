@@ -2,7 +2,7 @@
 
 This package will allow you to add a full user messaging system into your Laravel application. It is a highly intuitive laravel 5/6 chatmessenger with added features such as maximum number of participants in a conversation, starred threads, and a unique social media sharing link for inviting users to a conversation(otherwise known as Thread in this package).
 
-[![Total Downloads](https://poser.pugx.org/lexxyungcarter/chatmessenger/downloads)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/stable)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/lexxyungcarter/chatmessenger/v/unstable)](//packagist.org/packages/lexxyungcarter/chatmessenger) [![License](https://poser.pugx.org/lexxyungcarter/chatmessenger/license)](https://packagist.org/packages/lexxyungcarter/chatmessenger) [![composer.lock available](https://poser.pugx.org/lexxyungcarter/chatmessenger/composerlock)](https://packagist.org/packages/lexxyungcarter/chatmessenger)
+[![Total Downloads](https://poser.pugx.org/syntaxlexx/chatmessenger/downloads)](https://packagist.org/packages/syntaxlexx/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/syntaxlexx/chatmessenger/v/stable)](https://packagist.org/packages/syntaxlexx/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/syntaxlexx/chatmessenger/v/unstable)](//packagist.org/packages/syntaxlexx/chatmessenger) [![License](https://poser.pugx.org/syntaxlexx/chatmessenger/license)](https://packagist.org/packages/syntaxlexx/chatmessenger) [![composer.lock available](https://poser.pugx.org/syntaxlexx/chatmessenger/composerlock)](https://packagist.org/packages/syntaxlexx/chatmessenger)
 
 - [Check the Latest LIVE DEMO here](https://messenger-inertia.acelords.com)
 - [Find the Latest Source Code DEMO here](https://github.com/acelords/laravel-messenger-demo-inertia)
@@ -69,19 +69,19 @@ Installation instructions for Laravel 4 can be [found here](https://github.com/c
 ## Installation (Laravel 5.x)
 ### Laravel 5.6+ onwards
 ```bash
-composer require lexxyungcarter/chatmessenger
+composer require syntaxlexx/chatmessenger
 ```
 
 ### Laravel 5.1 > 5.5
 ```bash
-composer require lexxyungcarter/chatmessenger@1.0.8
+composer require syntaxlexx/chatmessenger@1.0.8
 ```
 
 Or place manually in composer.json:
 
 ```php
 "require": {
-    "lexxyungcarter/chatmessenger": "^1.0"
+    "syntaxlexx/chatmessenger": "^1.0"
 }
 ```
 
@@ -155,14 +155,14 @@ Please check out the examples section for a detailed example usage.
 ## Breaking Changes:
 ### Deprecated Packages
 Since [Pusher Http Laravel](https://github.com/pusher/pusher-http-laravel) has been deprecated, the current 
-demo uses the latest Laravel 5/6 trends of Broadcasting via events. Checkout [THE DEMO](https://github.com/lexxyungcarter/laravel-5-messenger-demo)
+demo uses the latest Laravel 5/6 trends of Broadcasting via events. Checkout [THE DEMO](https://github.com/syntaxlexx/laravel-5-messenger-demo)
 to see it in action. It becomes more manageable and expressive to configure channels individually.
 > If you plan to migrate to Laravel 6, the Pusher Http Laravel deprecated package will prohibit you due to dependency issues.
 > You will simply need to create an event to fire the broadcast message, and a channel for broadcasting. You can check the demo 
 >for practical usage.
 
 ### Migration to v1.2
-As pointed out in this [issue](https://github.com/lexxyungcarter/laravel-5-messenger/issues/10#issue-471480046), the starred
+As pointed out in this [issue](https://github.com/syntaxlexx/laravel-5-messenger/issues/10#issue-471480046), the starred
 property has been moved from `threads` table to the `participants` table as it makes much more sense there. 
 (Credits to [snarcraft](https://github.com/snarcraft)).
 > run `php artisan vendor:publish --provider="Lexx\ChatMessenger\ChatMessengerServiceProvider" --tag="migrations"` to copy migration file,
@@ -173,7 +173,7 @@ Same case applied to unstarring a thread. `$thread->unstar()`.
 
 
 ## So, Where's the Demo?
-- [Check the Source Code DEMO here](https://github.com/lexxyungcarter/laravel-5-messenger-demo)
+- [Check the Source Code DEMO here](https://github.com/syntaxlexx/laravel-5-messenger-demo)
 
 - [Check the LIVE DEMO here](https://messenger.acelords.com)
 
@@ -233,25 +233,25 @@ We have a [New Demo Version](https://messenger-inertia.acelords.com) that featur
 You can also check the individual models for more information about the functions. This package also utilizes [Scopes](https://laravel.com/docs/5.5/eloquent#query-scopes) in case you need more control over your queries.
 
 ## Examples
-* [Controller - MessagesController](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/MessagesController.php)
-* [Controller - ThreadController](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/ThreadController.php)
-* [Event - MessageWasPosted](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/Events/MessageWasPosted.php)
-* [Routes - web](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/routes/web.php)
-* [Routes - channel](https://github.com/lexxyungcarter/laravel-5-messenger/blob/master/examples/routes/channels.php)
-* [Views](https://github.com/lexxyungcarter/laravel-5-messenger/tree/master/examples/views)
-* [Composer.json Sample](https://github.com/lexxyungcarter/laravel-5-messenger/tree/master/examples/composer.json)
+* [Controller - MessagesController](https://github.com/syntaxlexx/laravel-5-messenger/blob/master/examples/MessagesController.php)
+* [Controller - ThreadController](https://github.com/syntaxlexx/laravel-5-messenger/blob/master/examples/ThreadController.php)
+* [Event - MessageWasPosted](https://github.com/syntaxlexx/laravel-5-messenger/blob/master/examples/Events/MessageWasPosted.php)
+* [Routes - web](https://github.com/syntaxlexx/laravel-5-messenger/blob/master/examples/routes/web.php)
+* [Routes - channel](https://github.com/syntaxlexx/laravel-5-messenger/blob/master/examples/routes/channels.php)
+* [Views](https://github.com/syntaxlexx/laravel-5-messenger/tree/master/examples/views)
+* [Composer.json Sample](https://github.com/syntaxlexx/laravel-5-messenger/tree/master/examples/composer.json)
 
 
 ## Contributing?
-Suggestions are welcome and any contributions whatsoever are highly valued. If feeling a little bit shy, feel free to send an email to [Lexx YungCarter](mailto:lexxyungcarter@gmail.com).
+Suggestions are welcome and any contributions whatsoever are highly valued. If feeling a little bit shy, feel free to send an email to [Lexx YungCarter](mailto:syntaxlexx@gmail.com).
 
 ## Security
 
-If you discover any security related issues, please use the issue tracker or better yet, send an email to [Lexx YungCarter](mailto:lexxyungcarter@gmail.com).
+If you discover any security related issues, please use the issue tracker or better yet, send an email to [Lexx YungCarter](mailto:syntaxlexx@gmail.com).
 
 ## Credits
 
-- [Lexx YungCarter](https://github.com/lexxyungcarter)
+- [/SyntaxLexx](https://github.com/syntaxlexx)
 - [Chris Gmyr](https://github.com/cmgmyr)
 
 ## What's Next?
