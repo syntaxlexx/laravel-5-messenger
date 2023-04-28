@@ -43,7 +43,7 @@ class ChatMessengerServiceProvider extends ServiceProvider
     protected function configure()
     {
         $this->mergeConfigFrom(
-            base_path('vendor/lexxyungcarter/chatmessenger/config/config.php'),
+            base_path('vendor/syntaxlexx/chatmessenger/config/config.php'),
             'chatmessenger'
         );
     }
@@ -57,11 +57,11 @@ class ChatMessengerServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                base_path('vendor/lexxyungcarter/chatmessenger/config/config.php') => config_path('chatmessenger.php'),
+                base_path('vendor/syntaxlexx/chatmessenger/config/config.php') => config_path('chatmessenger.php'),
             ], 'config');
 
             $this->publishes([
-                base_path('vendor/lexxyungcarter/chatmessenger/migrations') => base_path('database/migrations'),
+                base_path('vendor/syntaxlexx/chatmessenger/migrations') => base_path('database/migrations'),
             ], 'migrations');
         }
     }
