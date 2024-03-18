@@ -1,6 +1,6 @@
-# Laravel 5, 6, 7, 8, 9 & 10 ChatMessenger (+ Pusher)
+# Laravel 5, 6, 7, 8, 9, 10 & 11 ChatMessenger (+ Pusher)
 
-This package will allow you to add a full user messaging system into your Laravel application. It is a highly intuitive laravel 5/6 chatmessenger with added features such as maximum number of participants in a conversation, starred threads, and a unique social media sharing link for inviting users to a conversation(otherwise known as Thread in this package).
+This package will allow you to add a full user messaging system into your Laravel application. It is a highly intuitive laravel chatmessenger with added features such as maximum number of participants in a conversation, starred threads, and a unique social media sharing link for inviting users to a conversation(otherwise known as Thread in this package).
 
 [![Total Downloads](https://poser.pugx.org/syntaxlexx/chatmessenger/downloads)](https://packagist.org/packages/syntaxlexx/chatmessenger) [![Latest Stable Version](https://poser.pugx.org/syntaxlexx/chatmessenger/v/stable)](https://packagist.org/packages/syntaxlexx/chatmessenger) [![Latest Unstable Version](https://poser.pugx.org/syntaxlexx/chatmessenger/v/unstable)](//packagist.org/packages/syntaxlexx/chatmessenger) [![License](https://poser.pugx.org/syntaxlexx/chatmessenger/license)](https://packagist.org/packages/syntaxlexx/chatmessenger) [![composer.lock available](https://poser.pugx.org/syntaxlexx/chatmessenger/composerlock)](https://packagist.org/packages/syntaxlexx/chatmessenger)
 
@@ -23,6 +23,7 @@ This funding is used for maintaining the project and adding new features into Co
 
 | Laravel Version | Compatible?   |
 | --------------- | ------------- |
+| 11.x             | Yes! (^1.5.0) |
 | 10.x             | Yes! (^1.4.0) |
 | 9.x             | Yes! (^1.3.0) |
 | 8.x             | Yes! (^1.3.0) |
