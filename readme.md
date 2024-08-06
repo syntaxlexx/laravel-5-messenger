@@ -268,3 +268,7 @@ Should you be so greatful to provide code samples, feel free to share your code/
 
 ### Special Thanks
 This package used [cmgmyr/laravel-messenger](https://github.com/cmgmyr/laravel-messenger) as a starting point, which in turn initially used [AndreasHeiberg/laravel-messenger](https://github.com/AndreasHeiberg/laravel-messenger) as a starting point.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=syntaxlexx/laravel-5-messenger&type=Date)](https://star-history.com/#syntaxlexx/laravel-5-messenger&Date)
