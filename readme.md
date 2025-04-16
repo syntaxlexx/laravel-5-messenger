@@ -23,7 +23,7 @@ This funding is used for maintaining the project and adding new features into Co
 
 | Laravel Version | Compatible?   |
 | --------------- | ------------- |
-| 11.x             | Yes! (^1.5.0) |
+| 11.x,12.x       | Yes! (^1.5.0) |
 | 10.x             | Yes! (^1.4.0) |
 | 9.x             | Yes! (^1.3.0) |
 | 8.x             | Yes! (^1.3.0) |
